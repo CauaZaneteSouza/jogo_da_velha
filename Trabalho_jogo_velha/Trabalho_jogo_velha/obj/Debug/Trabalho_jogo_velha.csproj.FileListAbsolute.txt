@@ -1,0 +1,5 @@
+H:\Visual Studio 2022\Projects\Trabalho_jogo_velha\Trabalho_jogo_velha\obj\Debug\Trabalho_jogo_velha.csproj.AssemblyReference.cache
+H:\Visual Studio 2022\Projects\Trabalho_jogo_velha\Trabalho_jogo_velha\obj\Debug\Trabalho_jogo_velha.Form1.resources
+H:\Visual Studio 2022\Projects\Trabalho_jogo_velha\Trabalho_jogo_velha\obj\Debug\Trabalho_jogo_velha.Properties.Resources.resources
+H:\Visual Studio 2022\Projects\Trabalho_jogo_velha\Trabalho_jogo_velha\obj\Debug\Trabalho_jogo_velha.csproj.GenerateResource.cache
+H:\Visual Studio 2022\Projects\Trabalho_jogo_velha\Trabalho_jogo_velha\obj\Debug\Trabalho_jogo_velha.csproj.CoreCompileInputs.cache
