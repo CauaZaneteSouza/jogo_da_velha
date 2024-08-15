@@ -14,7 +14,7 @@ namespace Trabalho_jogo_velha
     public partial class Form1 : Form
     {
 
-        bool x = true;
+        bool xiss = true;
         public Form1()
         {
             InitializeComponent();
@@ -41,27 +41,27 @@ namespace Trabalho_jogo_velha
         }
         private void BClick(object sender, EventArgs e)
         {
-            ((Button)sender).Text = this.x ? "O" : "X";
-            ((Button)sender).Enabled = false;
+            ((Button)sender).Text = this.xiss ? "X" : "O"; // se o texto do botão for verdadeiro, coloca x, se não coloca, o
+            ((Button)sender).Enabled = false; // desabilita o botão
             Verificar_ganhador();
-            x = !x;
-            lbl_info.Text = string.Format("{0}, é a sua vez", this.x ? "O" : "X");
+            xiss = !xiss;
+            lbl_info.Text = string.Format("{0}, é a sua vez", this.x ? " X" : "O");
         }
         private void Verificar_ganhador()
         {
-            if (btn_01.Text != " " && btn_01.Text == btn_02.Text && btn_02.Text == btn_03.Text || //linha 1
-                btn_04.Text != " " && btn_04.Text == btn_05.Text && btn_05.Text == btn_06.Text || //linha 2
-                btn_07.Text != " " && btn_07.Text == btn_08.Text && btn_08.Text == btn_09.Text || //linha 3
+            if (btn_01.Text != String.Empty && btn_01.Text == btn_02.Text && btn_02.Text == btn_03.Text || //linha 1
+                btn_04.Text != String.Empty && btn_04.Text == btn_05.Text && btn_05.Text == btn_06.Text || //linha 2
+                btn_07.Text != String.Empty && btn_07.Text == btn_08.Text && btn_08.Text == btn_09.Text || //linha 3
 
-                btn_01.Text != " " && btn_01.Text == btn_04.Text && btn_08.Text == btn_07.Text || //coluna 1
-                btn_02.Text != " " && btn_02.Text == btn_05.Text && btn_05.Text == btn_08.Text || //coluna 2
-                btn_03.Text != " " && btn_03.Text == btn_06.Text && btn_06.Text == btn_09.Text || //coluna 3
+                btn_01.Text != String.Empty && btn_01.Text == btn_04.Text && btn_08.Text == btn_07.Text || //coluna 1
+                btn_02.Text != String.Empty && btn_02.Text == btn_05.Text && btn_05.Text == btn_08.Text || //coluna 2
+                btn_03.Text != String.Empty && btn_03.Text == btn_06.Text && btn_06.Text == btn_09.Text || //coluna 3
 
-                btn_01.Text != " " && btn_01.Text == btn_05.Text && btn_05.Text == btn_09.Text || // diagonal principal
-                btn_03.Text != " " && btn_03.Text == btn_05.Text && btn_05.Text == btn_07.Text || //diagonal secundária
+                btn_01.Text != String.Empty && btn_01.Text == btn_05.Text && btn_05.Text == btn_09.Text || // diagonal principal
+                btn_03.Text != String.Empty && btn_03.Text == btn_05.Text && btn_05.Text == btn_07.Text //diagonal secundária
               )
 
-            { MessageBox.Show(string.Format(" O ganhador é o [{0}]", x ? "O" : "X"), "Temos o ganhador",
+            { MessageBox.Show(string.Format(" O ganhador é o [{0}]", x ? "X" : "O"), "Temos o ganhador",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Reiniciar();
             }
@@ -93,7 +93,7 @@ namespace Trabalho_jogo_velha
                 if (item is Button)
                 {
                     item.Enabled = true;
-                    item.Text = " ";
+                    item.Text = String.Empty;
                 }
             }
         }
